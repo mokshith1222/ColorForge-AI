@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { useTheme } from '@/components/theme-provider';
 import { Moon, Sun, Palette, Code2, Menu } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { CommandMenu } from '@/components/layout/command-menu';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -50,11 +51,15 @@ export function Navbar() {
             <CommandMenu />
           </div>
           <nav className="flex items-center space-x-2">
-            <Button variant="ghost" size="icon" className="hidden sm:flex" asChild aria-label="GitHub Repository">
-              <Link href="https://github.com/moksh/colorforge" target="_blank" rel="noreferrer">
-                <Code2 className="h-5 w-5" />
-              </Link>
-            </Button>
+            <Link 
+              href="https://github.com/moksh/colorforge" 
+              target="_blank" 
+              rel="noreferrer" 
+              aria-label="GitHub Repository"
+              className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "hidden sm:flex")}
+            >
+              <Code2 className="h-5 w-5" />
+            </Link>
             <Button
               variant="ghost"
               size="icon"
