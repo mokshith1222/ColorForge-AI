@@ -142,7 +142,7 @@ ${Object.entries(scale).map(([k, v]) => `  --color-${scaleName}-${k}: ${v};`).jo
                          <Label className="text-xs mb-1.5 block" style={{ color: scale[700] }}>Email Address</Label>
                          <input 
                            type="email" 
-                           placeholder="you@example.com" 
+                           placeholder="mokshithnaik932@gmail.com" 
                            className="w-full px-3 py-2 rounded-md text-sm outline-none transition-colors" 
                            style={{ border: `1px solid ${scale[300]}`, backgroundColor: '#fff', color: scale[900] }}
                          />

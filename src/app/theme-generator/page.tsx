@@ -237,7 +237,7 @@ export default function ThemeGeneratorPage() {
                                    <div className="w-10 h-10 rounded-full border-2" style={{ borderColor: theme.secondary }} />
                                    <div className="flex-1">
                                       <div className="text-sm font-bold">User {i}</div>
-                                      <div className="text-xs" style={{ color: theme.textMuted }}>user{i}@example.com</div>
+                                      <div className="text-xs" style={{ color: theme.textMuted }}>user{i}@mokshithnaik932.gmail.com</div>
                                    </div>
                                    <div className="font-bold text-sm">+$299.00</div>
                                 </div>

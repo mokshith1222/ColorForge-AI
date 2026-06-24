@@ -31,7 +31,7 @@ export default function ContactPage() {
               <Mail className="w-8 h-8 text-primary mb-4" />
               <h3 className="text-lg font-bold mb-2">Email Us</h3>
               <p className="text-muted-foreground text-sm mb-4">For general inquiries, partnerships, and support.</p>
-              <a href="mailto:hello@colorforge.ai" className="text-primary font-medium hover:underline">hello@colorforge.ai</a>
+              <a href="mailto:mokshithnaik932@gmail.com" className="text-primary font-medium hover:underline">mokshithnaik932@gmail.com</a>
            </div>
 
            <div className="p-6 bg-card border border-border/50 rounded-2xl shadow-sm">
@@ -51,7 +51,7 @@ export default function ContactPage() {
                  </div>
                  <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">Email Address</label>
-                    <input type="email" id="email" className="w-full flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="john@example.com" />
+                    <input type="email" id="email" className="w-full flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="mokshithnaik932@gmail.com" />
                  </div>
               </div>
               <div className="space-y-2">
