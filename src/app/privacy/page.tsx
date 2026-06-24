@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
 
           <h3 className="text-xl font-semibold text-foreground mb-2 mt-4">Newsletter Subscriptions</h3>
           <p>
-            If you choose to subscribe to our newsletter, we collect your email address. This is processed securely via Resend and is used exclusively to send you updates about ColorForge AI. We will never sell your email to third parties.
+            If you choose to subscribe to our newsletter, we collect your email address. This is processed securely via Brevo and is used exclusively to send you updates about ColorForge AI. We will never sell your email to third parties.
           </p>
         </section>
 
