@@ -16,20 +16,26 @@ interface FAQ {
 }
 
 interface ToolContentProps {
-  toolName: string;
-  introduction: React.ReactNode;
-  howToUse: { step: string; desc: string }[];
-  examples: { title: string; desc: string }[];
-  benefits: string[];
-  mistakes: string[];
-  proTips: string[];
-  faqs: FAQ[];
-  relatedTools: { name: string; href: string }[];
+  toolName?: string;
+  title?: string;
+  introduction?: React.ReactNode;
+  description?: React.ReactNode;
+  features?: { title: string; description: string; icon: React.ReactNode }[];
+  howToUse?: { step: string; desc: string }[];
+  examples?: { title: string; desc: string }[];
+  benefits?: string[];
+  mistakes?: string[];
+  proTips?: string[];
+  faqs?: FAQ[];
+  relatedTools?: { name: string; href: string }[];
 }
 
 export function ToolContentLayout({
   toolName,
+  title,
   introduction,
+  description,
+  features = [],
   howToUse = [],
   examples = [],
   benefits = [],
@@ -38,15 +44,38 @@ export function ToolContentLayout({
   faqs = [],
   relatedTools = [],
 }: ToolContentProps) {
+  const displayTitle = toolName || title;
+  const displayIntro = introduction || description;
+
   return (
     <article className="container mx-auto px-4 py-24 max-w-4xl space-y-24 border-t border-border mt-24">
       
       {/* Introduction */}
-      {introduction && (
+      {displayIntro && (
       <section className="prose dark:prose-invert prose-lg max-w-none">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">What is the {toolName}?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">What is the {displayTitle}?</h2>
         <div className="text-muted-foreground leading-relaxed">
-          {introduction}
+          {displayIntro}
+        </div>
+      </section>
+      )}
+
+      {/* Features */}
+      {features.length > 0 && (
+      <section>
+        <h2 className="text-3xl font-bold mb-8 text-center">Features</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {features.map((feat, i) => (
+            <Card key={i} className="glass">
+              <CardContent className="p-6">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors">
+                  {feat.icon}
+                </div>
+                <h3 className="font-bold text-lg mb-2 text-foreground">{feat.title}</h3>
+                <p className="text-sm text-muted-foreground">{feat.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
       )}
