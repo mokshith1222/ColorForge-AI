@@ -35,9 +35,8 @@ export default function TrendsPage() {
   return (
     <>
       <JsonLd 
-        schema={{
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
+        type="BreadcrumbList"
+        data={{
           itemListElement: [
             {
               '@type': 'ListItem',
@@ -54,7 +53,7 @@ export default function TrendsPage() {
           ]
         }}
       />
-      <JsonLd schema={generateFAQSchema(faqs)} />
+      <JsonLd type="FAQPage" data={generateFAQSchema(faqs)} />
       
       <TrendsClientPage />
     </>

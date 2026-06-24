@@ -145,7 +145,7 @@ export function ToolContentLayout({
       <section>
         <JsonLd type="FAQPage" data={generateFAQSchema(faqs)} />
         <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
-        <Accordion type="single" className="w-full">
+        <Accordion className="w-full">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`item-${i}`}>
               <AccordionTrigger className="text-left text-lg font-medium">{faq.question}</AccordionTrigger>

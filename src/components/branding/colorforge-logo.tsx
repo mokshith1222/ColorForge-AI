@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useId } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants, HTMLMotionProps } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { useTheme } from 'next-themes';
 
 export type LogoVariant = 'full' | 'icon' | 'monochrome';
 
-interface ColorForgeLogoProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ColorForgeLogoProps extends HTMLMotionProps<"div"> {
   variant?: LogoVariant;
   animated?: boolean;
   iconClassName?: string;
@@ -31,7 +31,7 @@ export function ColorForgeLogo({
   const isMonochrome = variant === 'monochrome';
 
   // Animation Variants
-  const pathVariants = {
+  const pathVariants: Variants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: { 
       pathLength: 1, 
@@ -40,7 +40,7 @@ export function ColorForgeLogo({
     }
   };
 
-  const particleVariants = {
+  const particleVariants: Variants = {
     hidden: { scale: 0, opacity: 0 },
     visible: (i: number) => ({
       scale: 1,

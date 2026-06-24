@@ -292,7 +292,7 @@ export default function Home() {
             <p className="text-lg text-muted-foreground">Everything you need to know about the ColorForge AI platform.</p>
          </div>
 
-         <Accordion type="single" className="w-full">
+         <Accordion className="w-full">
             {faqs.map((faq, i) => (
                <AccordionItem key={i} value={`faq-${i}`} className="mb-2 border border-border/50 bg-card rounded-lg px-2 shadow-sm data-[state=open]:border-primary/50 transition-colors">
                   <AccordionTrigger className="text-left font-semibold text-lg py-4 hover:no-underline">{faq.question}</AccordionTrigger>

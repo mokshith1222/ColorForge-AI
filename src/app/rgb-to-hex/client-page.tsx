@@ -59,7 +59,7 @@ export function RgbToHexClient() {
                          className="w-20 text-center font-mono h-8"
                        />
                     </div>
-                    <Slider value={[r]} onValueChange={([v]) => setR(v)} max={255} step={1} className="py-2" />
+                    <Slider value={r} onChange={(e) => setR(parseInt(e.target.value))} max={255} step={1} className="py-2" />
                  </div>
 
                  <div>
@@ -71,7 +71,7 @@ export function RgbToHexClient() {
                          className="w-20 text-center font-mono h-8"
                        />
                     </div>
-                    <Slider value={[g]} onValueChange={([v]) => setG(v)} max={255} step={1} className="py-2" />
+                    <Slider value={g} onChange={(e) => setG(parseInt(e.target.value))} max={255} step={1} className="py-2" />
                  </div>
 
                  <div>
@@ -83,7 +83,7 @@ export function RgbToHexClient() {
                          className="w-20 text-center font-mono h-8"
                        />
                     </div>
-                    <Slider value={[b]} onValueChange={([v]) => setB(v)} max={255} step={1} className="py-2" />
+                    <Slider value={b} onChange={(e) => setB(parseInt(e.target.value))} max={255} step={1} className="py-2" />
                  </div>
               </div>
 

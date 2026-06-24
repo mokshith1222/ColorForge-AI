@@ -93,8 +93,8 @@ export function HexToRgbClient() {
                     <span className="font-mono text-sm">{Math.round(opacity * 100)}%</span>
                  </div>
                  <Slider 
-                   value={[opacity]} 
-                   onValueChange={([val]) => setOpacity(val)} 
+                   value={opacity} 
+                   onChange={(e) => setOpacity(parseFloat(e.target.value))} 
                    min={0} 
                    max={1} 
                    step={0.01} 
