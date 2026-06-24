@@ -47,7 +47,7 @@ export function TestimonialsSection() {
                     loading="lazy"
                   />
                   <div>
-                    <h4 className="font-bold text-sm">{t.name}</h4>
+                    <div className="font-bold text-sm">{t.name}</div>
                     <p className="text-xs text-muted-foreground">{t.role}</p>
                   </div>
                 </div>

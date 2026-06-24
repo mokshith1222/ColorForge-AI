@@ -50,10 +50,9 @@ export function Navbar() {
             <CommandMenu />
           </div>
           <nav className="flex items-center space-x-2">
-            <Link href="https://github.com/moksh/colorforge" target="_blank" rel="noreferrer">
-              <Button variant="ghost" size="icon" className="hidden sm:flex">
+            <Link href="https://github.com/moksh/colorforge" target="_blank" rel="noreferrer" aria-label="GitHub Repository">
+              <Button variant="ghost" size="icon" className="hidden sm:flex" tabIndex={-1}>
                 <Code2 className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
               </Button>
             </Link>
             <Button
@@ -70,6 +69,7 @@ export function Navbar() {
               size="icon"
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
             >
               <Menu className="h-5 w-5" />
             </Button>

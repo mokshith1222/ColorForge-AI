@@ -107,7 +107,7 @@ export default function Home() {
             
             <div className="flex flex-col w-full sm:w-auto sm:flex-row gap-4">
               <Link href="/tools" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-base shadow-xl shadow-primary/25 hover:shadow-primary/40 transition-all">
+                <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-base font-bold shadow-xl shadow-primary/25 hover:shadow-primary/40 transition-all">
                   Explore Tools
                 </Button>
               </Link>
@@ -142,13 +142,15 @@ export default function Home() {
 
       {/* Brands Section (From Mockup) */}
       <section className="w-full py-8 border-b border-border/50 bg-background/50 backdrop-blur-sm relative z-10">
-        <div className="container mx-auto px-4 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-           <span className="text-sm font-bold tracking-widest uppercase">Trusted by creators at</span>
-           <span className="font-bold text-xl flex items-center gap-2"><div className="w-4 h-4 bg-blue-500 rounded-sm"></div> Microsoft</span>
-           <span className="font-bold text-xl flex items-center gap-2"><div className="w-4 h-4 bg-red-500 rounded-full"></div> Google</span>
-           <span className="font-bold text-xl flex items-center gap-2"><div className="w-4 h-4 bg-pink-500 rounded-tl-xl rounded-br-xl"></div> airbnb</span>
-           <span className="font-bold text-xl flex items-center gap-2"><div className="w-4 h-4 bg-green-500 rounded-full"></div> Spotify</span>
-           <span className="font-bold text-xl flex items-center gap-2"><div className="w-4 h-4 bg-black border border-white/20 rounded-sm"></div> vercel</span>
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+           <span className="text-sm font-bold tracking-widest uppercase text-muted-foreground">Trusted by creators at</span>
+           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+               <span className="font-bold text-xl flex items-center gap-2"><div className="w-4 h-4 bg-blue-500 rounded-sm"></div> Microsoft</span>
+               <span className="font-bold text-xl flex items-center gap-2"><div className="w-4 h-4 bg-red-500 rounded-full"></div> Google</span>
+               <span className="font-bold text-xl flex items-center gap-2"><div className="w-4 h-4 bg-pink-500 rounded-tl-xl rounded-br-xl"></div> airbnb</span>
+               <span className="font-bold text-xl flex items-center gap-2"><div className="w-4 h-4 bg-green-500 rounded-full"></div> Spotify</span>
+               <span className="font-bold text-xl flex items-center gap-2"><div className="w-4 h-4 bg-black border border-white/20 rounded-sm"></div> vercel</span>
+           </div>
         </div>
       </section>
 
@@ -252,7 +254,7 @@ export default function Home() {
       <section className="w-full py-24 bg-card/50 relative z-10 border-y border-border/50">
          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
-               <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary shadow-inner mb-6">
+               <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-sm font-medium text-foreground shadow-inner mb-6">
                   <BookOpen className="w-4 h-4 mr-2" /> Expert Knowledge
                </div>
                <h2 className="text-3xl md:text-4xl font-bold mb-6">Rooted in Proven Theory</h2>
@@ -263,7 +265,7 @@ export default function Home() {
                   We don't just give you tools—we provide the context. Explore our extensive knowledge hubs to master the psychology behind color selection, learn how to build scalable design tokens, and understand the rigorous accessibility standards that define the modern web.
                </p>
                <Link href="/color-theory">
-                  <Button variant="secondary" size="lg">Read the Guides <ArrowRight className="ml-2 w-4 h-4" /></Button>
+                  <Button variant="secondary" size="lg" className="font-bold">Read the Guides <ArrowRight className="ml-2 w-4 h-4" /></Button>
                </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -306,7 +308,7 @@ export default function Home() {
       
       {/* Newsletter / Subscribe Section */}
       <section className="w-full bg-black text-white py-32 border-t border-white/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
+        {/* Removed noise.svg to fix 404 console error */}
         <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-accent/20 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="container mx-auto px-4 text-center relative z-10">
