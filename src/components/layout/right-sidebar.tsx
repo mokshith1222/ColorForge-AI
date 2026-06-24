@@ -17,7 +17,7 @@ const TOOLS = [
   { href: '/gradient-generator', name: 'Gradient Generator', desc: 'Design stunning gradients', icon: Sparkles },
   { href: '/ai-palette', name: 'AI Palette Generator', desc: 'AI-powered color suggestions', icon: Wand2 },
   { href: '/color-converter', name: 'Color Converter', desc: 'Convert between formats', icon: ArrowRightLeft },
-  { href: '/tailwind-generator', name: 'Tailwind Generator', desc: 'Generate Tailwind color scales', icon: Layout },
+  { href: '/tailwind-color-generator', name: 'Tailwind Generator', desc: 'Generate Tailwind color scales', icon: Layout },
   { href: '/accessibility-checker', name: 'Accessibility Checker', desc: 'Check color accessibility', icon: Eye },
   { href: '/image-color-extractor', name: 'Image Color Extractor', desc: 'Extract colors from images', icon: ImageIcon },
   { href: '/theme-generator', name: 'Theme Generator', desc: 'Generate complete themes', icon: PaintBucket },
@@ -27,9 +27,9 @@ const TOOLS = [
   { href: '/ui-preview', name: 'UI Palette Preview', desc: 'Preview in real UI layouts', icon: Layers },
   { href: '/tokens', name: 'Design Token Generator', desc: 'Export design tokens', icon: Code2 },
   { href: '/export', name: 'Export Center', desc: 'Export in multiple formats', icon: Download },
-  { href: '/dev-hub', name: 'Developer Hub', desc: 'Resources for developers', icon: Terminal },
+  { href: '/developer-hub', name: 'Developer Hub', desc: 'Resources for developers', icon: Terminal },
   { href: '/css-vars', name: 'CSS Variable Generator', desc: 'Generate CSS variables', icon: Settings },
-  { href: '/screenshot', name: 'Screenshot Extractor', desc: 'Extract from screenshots', icon: Camera },
+  { href: '/image-color-extractor', name: 'Screenshot Extractor', desc: 'Extract from screenshots', icon: Camera },
   { href: '/collections', name: 'Color Collections', desc: 'Curated color collections', icon: Bookmark },
   { href: '/trends', name: 'Color Trends', desc: 'Trending color insights', icon: TrendingUp },
 ];
@@ -53,7 +53,7 @@ export function RightSidebar() {
             
             return (
               <Link
-                key={tool.href}
+                key={`${tool.href}-${tool.name}`}
                 href={tool.href}
                 className={cn(
                   "flex items-start gap-3 p-3 rounded-lg transition-all duration-200 group",

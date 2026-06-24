@@ -30,26 +30,29 @@ interface ToolContentProps {
 export function ToolContentLayout({
   toolName,
   introduction,
-  howToUse,
-  examples,
-  benefits,
-  mistakes,
-  proTips,
-  faqs,
-  relatedTools,
+  howToUse = [],
+  examples = [],
+  benefits = [],
+  mistakes = [],
+  proTips = [],
+  faqs = [],
+  relatedTools = [],
 }: ToolContentProps) {
   return (
     <article className="container mx-auto px-4 py-24 max-w-4xl space-y-24 border-t border-border mt-24">
       
       {/* Introduction */}
+      {introduction && (
       <section className="prose dark:prose-invert prose-lg max-w-none">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">What is the {toolName}?</h2>
         <div className="text-muted-foreground leading-relaxed">
           {introduction}
         </div>
       </section>
+      )}
 
       {/* How To Use */}
+      {howToUse.length > 0 && (
       <section>
         <div className="flex items-center gap-3 mb-8">
           <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -71,8 +74,10 @@ export function ToolContentLayout({
           ))}
         </div>
       </section>
+      )}
 
       {/* Practical Examples */}
+      {examples.length > 0 && (
       <section>
         <h2 className="text-3xl font-bold mb-8">Practical Examples & Use Cases</h2>
         <div className="grid md:grid-cols-2 gap-6">
@@ -86,9 +91,12 @@ export function ToolContentLayout({
           ))}
         </div>
       </section>
+      )}
 
       {/* Benefits vs Mistakes (Split View) */}
+      {(benefits.length > 0 || mistakes.length > 0) && (
       <div className="grid md:grid-cols-2 gap-12">
+        {benefits.length > 0 && (
         <section>
           <div className="flex items-center gap-2 mb-6">
             <CheckCircle className="h-6 w-6 text-green-500" />
@@ -103,7 +111,9 @@ export function ToolContentLayout({
             ))}
           </ul>
         </section>
+        )}
         
+        {mistakes.length > 0 && (
         <section>
           <div className="flex items-center gap-2 mb-6">
             <TriangleAlert className="h-6 w-6 text-yellow-500" />
@@ -118,9 +128,12 @@ export function ToolContentLayout({
             ))}
           </ul>
         </section>
+        )}
       </div>
+      )}
 
       {/* Pro Tips */}
+      {proTips.length > 0 && (
       <section className="bg-accent/5 border border-accent/20 rounded-3xl p-8 relative overflow-hidden">
         <div className="absolute top-0 right-0 p-8 opacity-10">
           <Lightbulb className="w-48 h-48" />
@@ -140,8 +153,10 @@ export function ToolContentLayout({
           </ul>
         </div>
       </section>
+      )}
 
       {/* FAQ Section */}
+      {faqs.length > 0 && (
       <section>
         <JsonLd type="FAQPage" data={generateFAQSchema(faqs)} />
         <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
@@ -156,8 +171,10 @@ export function ToolContentLayout({
           ))}
         </Accordion>
       </section>
+      )}
 
       {/* Internal Linking / Related Tools */}
+      {relatedTools.length > 0 && (
       <section className="pt-8 border-t border-border">
         <h2 className="text-2xl font-bold mb-6">Explore Related Tools</h2>
         <div className="flex flex-wrap gap-4">
@@ -170,6 +187,7 @@ export function ToolContentLayout({
           ))}
         </div>
       </section>
+      )}
     </article>
   );
 }
