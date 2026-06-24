@@ -85,8 +85,8 @@ export function NewsletterSubscribe() {
             </div>
           )}
           
-          <p className="text-xs text-center text-muted-foreground pt-2">
-            We care about your data in our <a href="/privacy" className="underline hover:text-foreground">privacy policy</a>. No spam.
+          <p className="text-xs text-center text-white/70 pt-2">
+            We care about your data in our <a href="/privacy" className="underline text-white hover:text-white/80">privacy policy</a>. No spam.
           </p>
         </form>
       )}

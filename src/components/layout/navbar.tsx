@@ -50,19 +50,19 @@ export function Navbar() {
             <CommandMenu />
           </div>
           <nav className="flex items-center space-x-2">
-            <Link href="https://github.com/moksh/colorforge" target="_blank" rel="noreferrer" aria-label="GitHub Repository">
-              <Button variant="ghost" size="icon" className="hidden sm:flex" tabIndex={-1}>
+            <Button variant="ghost" size="icon" className="hidden sm:flex" asChild aria-label="GitHub Repository">
+              <Link href="https://github.com/moksh/colorforge" target="_blank" rel="noreferrer">
                 <Code2 className="h-5 w-5" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+              aria-label="Toggle theme"
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              <span className="sr-only">Toggle theme</span>
             </Button>
             <Button
               variant="ghost"

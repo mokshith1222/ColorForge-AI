@@ -107,7 +107,7 @@ export default function Home() {
             
             <div className="flex flex-col w-full sm:w-auto sm:flex-row gap-4">
               <Link href="/tools" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-base font-bold shadow-xl shadow-primary/25 hover:shadow-primary/40 transition-all">
+                <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-base font-bold shadow-xl shadow-primary/25 hover:shadow-primary/40 transition-all bg-foreground text-background hover:bg-foreground/90">
                   Explore Tools
                 </Button>
               </Link>
@@ -309,7 +309,7 @@ export default function Home() {
       {/* Newsletter / Subscribe Section */}
       <section className="w-full bg-black text-white py-32 border-t border-white/10 relative overflow-hidden">
         {/* Removed noise.svg to fix 404 console error */}
-        <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-accent/20 blur-[120px] rounded-full pointer-events-none" />
+        {/* Removed blurred overlay to fix contrast issue */}
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md mb-8 shadow-2xl">
