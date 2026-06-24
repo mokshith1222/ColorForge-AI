@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { CommandMenu } from '@/components/layout/command-menu';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ColorForgeLogo } from '@/components/branding/colorforge-logo';
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -24,11 +25,12 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background/60 backdrop-blur-md supports-[backdrop-filter]:bg-background/40">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6 md:gap-10">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-primary to-accent transition-transform group-hover:scale-105">
-              <Palette className="h-5 w-5 text-white" />
-            </div>
-            <span className="inline-block font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">ColorForge AI</span>
+          <Link href="/" className="flex items-center group min-w-[180px] max-w-[260px] outline-none rounded-lg focus-visible:ring-2 focus-visible:ring-primary">
+            <ColorForgeLogo 
+              animated 
+              iconClassName="w-8 h-8 md:w-10 md:h-10" 
+              wordmarkClassName="text-lg md:text-xl"
+            />
           </Link>
           <nav className="hidden gap-6 md:flex">
             {links.map((link) => (

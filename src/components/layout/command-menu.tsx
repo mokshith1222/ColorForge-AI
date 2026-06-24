@@ -10,6 +10,7 @@ import {
   Sun, Moon, Laptop, RefreshCcw
 } from 'lucide-react';
 import { useColorStore } from '@/store/useColorStore';
+import { ColorForgeLogo } from '@/components/branding/colorforge-logo';
 
 export function CommandMenu() {
   const [open, setOpen] = useState(false);
@@ -57,6 +58,7 @@ export function CommandMenu() {
         <div className="w-full max-w-2xl bg-card border border-border rounded-xl shadow-2xl overflow-hidden flex flex-col">
           <Command className="w-full flex flex-col">
             <div className="flex items-center border-b border-border px-3">
+              <ColorForgeLogo variant="icon" iconClassName="w-5 h-5 mr-2 opacity-50" />
               <Command.Input 
                 placeholder="Type a command or search..." 
                 className="flex h-12 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"

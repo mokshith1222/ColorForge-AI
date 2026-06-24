@@ -8,6 +8,7 @@ import { StickyActionBar } from "@/components/layout/sticky-action-bar";
 import { CursorGlow } from "@/components/layout/cursor-glow";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { RightSidebar } from "@/components/layout/right-sidebar";
+import { SplashScreen } from "@/components/layout/splash-screen";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <SplashScreen />
           <Navbar />
           <Breadcrumbs />
           <CursorGlow />

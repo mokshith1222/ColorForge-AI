@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Palette } from 'lucide-react';
+import { Palette, Twitter, Github, Linkedin } from 'lucide-react';
+import { ColorForgeLogo } from '@/components/branding/colorforge-logo';
 
 export function Footer() {
   const links = {
@@ -29,15 +30,22 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-background py-12 md:py-16 mt-auto">
       <div className="container grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
         <div className="col-span-2 lg:col-span-2">
-          <Link href="/" className="flex items-center space-x-2 group w-fit">
-            <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-primary to-accent">
-              <Palette className="h-5 w-5 text-white" />
-            </div>
-            <span className="inline-block font-bold text-lg">ColorForge AI</span>
+          <Link href="/" className="flex items-center group w-fit outline-none rounded-lg focus-visible:ring-2 focus-visible:ring-primary mb-4">
+            <ColorForgeLogo 
+              iconClassName="w-10 h-10" 
+              wordmarkClassName="text-xl"
+            />
           </Link>
-          <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-            The ultimate color design platform. Generate palettes, gradients, and tailwind scales. Create perfect color systems instantly.
-          </p>
+          <div className="mt-4 text-sm font-semibold tracking-widest text-muted-foreground uppercase flex flex-col gap-1">
+             <span>Design Better.</span>
+             <span>Create Faster.</span>
+             <span className="text-primary">With Colors.</span>
+          </div>
+          <div className="flex gap-4 mt-6 text-muted-foreground">
+             <Link href="https://twitter.com" target="_blank" className="hover:text-primary transition-colors"><Twitter className="w-5 h-5" /></Link>
+             <Link href="https://github.com/mokshith1222/ColorForge-AI" target="_blank" className="hover:text-primary transition-colors"><Github className="w-5 h-5" /></Link>
+             <Link href="https://linkedin.com" target="_blank" className="hover:text-primary transition-colors"><Linkedin className="w-5 h-5" /></Link>
+          </div>
         </div>
         
         <div>
